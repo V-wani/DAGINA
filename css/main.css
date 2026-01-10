@@ -574,14 +574,13 @@ h1, h2, h3, h4, h5, h6 {
 /* Grayscale Hover Effect for Products */
 
 .grayscale-hover {
-  filter: grayscale(100%);
-  opacity: 0.85;
-  transition: all 0.7s ease-in-out;
+  filter: none !important;
 }
 
 .grayscale-hover:hover {
   filter: grayscale(0%);
   opacity: 1;
+  
 }
 
 .pointer-events-none {
