@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS Variables */
+:root {
+  --kumkum-red: #c1121f;
+  --turmeric-yellow: #f4a261;
+  --deep-black: #0f0f0f;
+  --tilgul-white: #ffffff;
+  --cream-bg: #fdf6ec;
+}
+
+/* Custom Base Styles */
+@layer base {
+  body {
+    font-family: 'Tiro Devanagari Marathi', 'Baloo 2', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Baloo 2', sans-serif;
+  }
+}
+
+/* Custom Utility Classes */
+@layer utilities {
+  /* Hide scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Custom Colors */
+  .text-kumkum {
+    color: var(--kumkum-red);
+  }
+  .bg-kumkum {
+    background-color: var(--kumkum-red);
+  }
+  .text-turmeric {
+    color: var(--turmeric-yellow);
+  }
+  .bg-turmeric {
+    background-color: var(--turmeric-yellow);
+  }
+  .text-deep-black {
+    color: var(--deep-black);
+  }
+  .bg-deep-black {
+    background-color: var(--deep-black);
+  }
+  .bg-cream {
+    background-color: var(--cream-bg);
+  }
+  
+  /* Gradient utilities */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+}
+
+/* Custom Components */
+@layer components {
+  /* Glass Card Effect */
+  .glass-card {
+    background: rgba(253, 246, 236, 0.15);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(193, 18, 31, 0.1);
+  }
+
+  /* Grayscale Hover Effect for Products */
+  .grayscale-hover {
+    filter: grayscale(100%);
+    opacity: 0.85;
+    transition: all 0.7s ease-in-out;
+  }
+  .grayscale-hover:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+}
+
+/* Custom Animations */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Animation Utility Classes */
+.animate-spin-slow {
+  animation: rotate 15s linear infinite;
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+}
+
+/* Smooth Scroll Behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Selection */
+::selection {
+  background-color: var(--kumkum-red);
+  color: white;
+}
+
+/* Focus Visible for Accessibility */
+*:focus-visible {
+  outline: 2px solid var(--kumkum-red);
+  outline-offset: 2px;
+}
