@@ -61,7 +61,7 @@ if (!$result) {
 
     <!-- LEFT: PAGE TITLE -->
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight
-               text-[#a4781f]
+               text-[#d70303]
                drop-shadow-[0_3px_6px_rgba(196,22,28,0.35)]"
         style="font-family: 'Baloo 2', cursive;">
         दागिने कलेक्शन

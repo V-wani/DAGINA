@@ -1,4 +1,83 @@
-.DS_Store
-node_modules
-.idea
+####################################
+# 🔐 SECURITY — NEVER COMMIT
+####################################
+
+# Database credentials
+admin/db_connect.php
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+
+# User uploaded files (products, images, media)
+admin/assets/products/
+uploads/
+media/
+
+####################################
+# 🧠 BACKUPS / DUMPS (CRITICAL)
+####################################
+
+*.sql
+*.dump
+*.bak
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+####################################
+# ⚙️ NODE / FRONTEND
+####################################
+
+node_modules/
 package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+####################################
+# 🖥️ IDE / EDITORS
+####################################
+
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+####################################
+# 🗂️ OS SYSTEM FILES
+####################################
+
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+####################################
+# 🧪 LOGS / CACHE / TEMP
+####################################
+
+*.log
+logs/
+cache/
+tmp/
+temp/
+
+####################################
+# 🧾 PHP / SERVER
+####################################
+
+php_errors.log
+error_log
+.htaccess.bak
+
+####################################
+# 🔄 MISC
+####################################
+
+*.swp
+*.swo
+*~
