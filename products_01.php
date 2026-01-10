@@ -16,6 +16,7 @@ if (!$result) {
     <title>DAGINA – Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Hind:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <script>
@@ -24,7 +25,8 @@ if (!$result) {
                 extend: {
                     colors: {
                         kumkum: '#C4161C',
-                        cream: '#FFF6EE'
+                        cream: '#FFF6EE',
+                        gold: '#D4AF37'
                     }
                 }
             }
@@ -55,15 +57,38 @@ if (!$result) {
 <body class="bg-[#FFF9F4]">
 
 <!-- HEADER -->
-<header class="max-w-7xl mx-auto px-6 py-6 flex justify-between items-center">
-    <h1 class="text-3xl font-extrabold text-kumkum">DAGINA</h1>
-    <a href="index.html" class="text-gray-600 hover:text-kumkum font-semibold">Home</a>
+<header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
+
+    <!-- LEFT: PAGE TITLE -->
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight
+               text-[#a4781f]
+               drop-shadow-[0_3px_6px_rgba(196,22,28,0.35)]"
+        style="font-family: 'Baloo 2', cursive;">
+        दागिने कलेक्शन
+    </h1>
+
+    <!-- RIGHT: HOME BUTTON -->
+    <a href="index.html"
+       class="px-5 py-2 rounded-full
+              border-2 border-[#D4AF37]
+              text-[#8A6D1D]
+              font-semibold text-sm md:text-base
+              hover:bg-[#D4AF37]
+              hover:text-white
+              transition-all duration-300
+              shadow-sm hover:shadow-lg">
+        Home
+    </a>
+
 </header>
+
 
 <!-- TITLE -->
 <section class="max-w-7xl mx-auto px-6 mb-8">
-    <h2 class="text-4xl font-bold text-gray-900">आमचे दागिने</h2>
-    <p class="text-gray-600 mt-1">शुद्धता • परंपरा • विश्वास</p>
+    <p class="text-gray-600 mt-1"
+       style="font-family: 'Hind', sans-serif;">
+        आजची फॅशन - कालची परंपरा
+    </p>
 </section>
 
 <!-- PRODUCTS GRID -->
@@ -89,14 +114,10 @@ if (!$result) {
 ?>
 
 <!-- PRODUCT CARD -->
-<div class="card-soft overflow-hidden
-    flex flex-row lg:flex-col w-full">
+<div class="card-soft overflow-hidden flex flex-row lg:flex-col w-full">
 
     <!-- IMAGE -->
-    <div class="relative
-        w-[120px] sm:w-[140px] lg:w-full
-        flex-shrink-0">
-
+    <div class="relative w-[120px] sm:w-[140px] lg:w-full flex-shrink-0">
         <img src="admin/assets/products/<?php echo htmlspecialchars($image); ?>"
              alt="<?php echo $name; ?>"
              class="w-full h-full lg:h-[260px] object-cover
@@ -119,7 +140,6 @@ if (!$result) {
                 <?php echo $desc; ?>
             </p>
 
-            <!-- PRICE -->
             <div class="flex items-center gap-2 mb-4">
                 <span class="text-2xl lg:text-3xl font-black text-kumkum">
                     ₹<?php echo number_format($price); ?>
@@ -129,38 +149,30 @@ if (!$result) {
                     ₹<?php echo number_format($old_price); ?>
                 </span>
 
-                <span class="ml-auto bg-orange-100 text-orange-600
-                             text-xs font-bold px-3 py-1 rounded-full">
+                <span class="ml-auto bg-orange-100 text-orange-600 text-xs font-bold px-3 py-1 rounded-full">
                     <?php echo $discount; ?>% सूट
                 </span>
             </div>
         </div>
 
-        <!-- WHATSAPP BUTTON (FIXED & CORRECT) -->
+        <!-- WHATSAPP BUTTON -->
         <a href="https://wa.me/91XXXXXXXXXX?text=<?php echo $waText; ?>"
            target="_blank"
-           class="whatsapp-btn w-full
-                  flex items-center justify-center gap-2
+           class="whatsapp-btn w-full flex items-center justify-center gap-2
                   text-white py-2.5 lg:py-4
                   rounded-xl lg:rounded-2xl
                   font-bold text-sm lg:text-base
                   hover:opacity-90 transition">
 
             <svg xmlns="http://www.w3.org/2000/svg"
-                 width="20" height="20"
                  viewBox="0 0 24 24"
-                 fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967
-                         -.273-.099-.471-.148-.67.15-.197.297-.767.966
-                         -.94 1.164-.173.199-.347.223-.644.075-.297
-                         -.15-1.255-.463-2.39-1.475-.883-.788-1.48
-                         -1.761-1.653-2.059-.173-.297-.018-.458.13
-                         -.606.134-.133.298-.347.446-.52.149-.174
-                         .198-.298.298-.497.099-.198.05-.371-.025
-                         -.52-.075-.149-.669-1.612-.916-2.207Z"/>
+                 width="20" height="20"
+                 fill="currentColor"
+                 class="flex-shrink-0">
+                <path d="M20.52 3.48A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.15 1.6 5.97L0 24l6.3-1.65a11.87 11.87 0 0 0 5.75 1.47h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.17-1.24-6.15-3.48-8.45z"/>
             </svg>
 
-            WhatsApp वर ऑर्डर करा
+            <span>WhatsApp वर ऑर्डर करा</span>
         </a>
 
     </div>
