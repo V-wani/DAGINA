@@ -17,6 +17,7 @@ $avatarUrl = "https://ui-avatars.com/api/?name=" . urlencode($adminName) . "&bac
     <title>Admin Dashboard | DAGINA Jewellery</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <link rel="stylesheet" href="assets/admin.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +38,10 @@ $avatarUrl = "https://ui-avatars.com/api/?name=" . urlencode($adminName) . "&bac
             </div>
 
             <div class="flex items-center gap-6">
-                <div class="relative w-full md:w-64">
+                
+                <div class="relative w-full md:w-64 hidden md:block">
                     <svg class="absolute left-3 top-3 text-gray-400 w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
-                    <input type="search" placeholder="Search orders..." class="w-full pl-10 pr-4 py-2.5 rounded-2xl border-none text-sm font-semibold focus:outline-none">
+                    <input type="search" placeholder="Search orders..." class="w-full pl-10 pr-4 py-2.5 rounded-2xl border-none text-sm font-semibold focus:outline-none shadow-sm">
                 </div>
 
                 <div class="text-right hidden md:block">
@@ -48,8 +50,8 @@ $avatarUrl = "https://ui-avatars.com/api/?name=" . urlencode($adminName) . "&bac
                 </div>
                 
                 <div class="relative">
-                    <button onclick="toggleProfileMenu()" class="flex items-center gap-2 focus:outline-none">
-                        <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white shadow-md overflow-hidden hover:ring-2 hover:ring-kumkum/30 transition-all">
+                    <button onclick="toggleProfileMenu()" class="flex items-center gap-2 focus:outline-none group">
+                        <div class="w-10 h-10 rounded-full bg-gray-300 border-2 border-white shadow-md overflow-hidden group-hover:ring-2 group-hover:ring-kumkum/30 transition-all">
                             <img src="<?= $avatarUrl; ?>" alt="Admin" class="w-full h-full object-cover">
                         </div>
                     </button>
@@ -60,7 +62,7 @@ $avatarUrl = "https://ui-avatars.com/api/?name=" . urlencode($adminName) . "&bac
                             <p class="text-sm font-bold text-deep-black truncate"><?= htmlspecialchars($adminName); ?></p>
                         </div>
                         <div class="py-1">
-                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-kumkum transition-colors">My Profile</a>
+                            <a href="profile.php" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-kumkum transition-colors">My Profile</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-red-50 hover:text-kumkum transition-colors">Settings</a>
                         </div>
                         <div class="border-t border-gray-100 py-1">
