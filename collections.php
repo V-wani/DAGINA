@@ -90,7 +90,6 @@ tailwind.config = {
 
 <body class="bg-[#FFF9F4] font-body text-dark">
 
-<!-- HEADER -->
 <header class="max-w-7xl mx-auto px-6 pt-8 pb-4 flex flex-col md:flex-row justify-between gap-4">
     <div>
         <a href="./index.php" class="block cursor-pointer group">
@@ -115,16 +114,8 @@ tailwind.config = {
                 hover:text-white hover:border-kumkum
                 hover:shadow-xl hover:shadow-kumkum/30
                 transition-all duration-300">
-
-        <!-- Home Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg"
-            width="18" height="18"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="group-hover:scale-110 transition">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:scale-110 transition">
             <path d="M3 9l9-7 9 7"></path>
             <path d="M9 22V12h6v10"></path>
         </svg>
@@ -134,7 +125,6 @@ tailwind.config = {
 
 </header>
 
-<!-- SEARCH -->
 <section class="max-w-4xl mx-auto px-6 my-6">
 <form method="GET" class="relative">
     <input type="text" name="search" value="<?= htmlspecialchars($search); ?>"
@@ -143,7 +133,6 @@ tailwind.config = {
 </form>
 </section>
 
-<!-- CATEGORY BUTTONS -->
 <section class="max-w-7xl mx-auto px-6 mb-10">
 <div class="flex flex-wrap gap-3 justify-center">
 
@@ -169,11 +158,11 @@ foreach ($categories as $key => $label):
 </div>
 </section>
 
-<!-- PRODUCTS -->
 <section class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 pb-20">
 
 <?php if($result->num_rows > 0): ?>
 <?php while($row = $result->fetch_assoc()):
+    $id    = $row['id'];
     $name  = htmlspecialchars($row['name']);
     $price = (int)$row['price'];
     $desc  = htmlspecialchars($row['description']);
@@ -181,11 +170,11 @@ foreach ($categories as $key => $label):
     $cat   = htmlspecialchars($row['category']);
     $waTxt = urlencode("नमस्कार, मला {$name} (₹{$price}) ऑर्डर करायची आहे.");
 ?>
-<div class="card-soft overflow-hidden flex flex-col">
+<div class="card-soft overflow-hidden flex flex-col group">
 
-    <div class="h-[260px] overflow-hidden">
-        <img src="admin/assets/products/<?= $image; ?>" class="w-full h-full object-cover hover:scale-110 transition">
-    </div>
+    <a href="product_details.php?id=<?= $id; ?>" class="h-[260px] overflow-hidden block">
+        <img src="admin/assets/products/<?= $image; ?>" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+    </a>
 
     <div class="p-5 flex flex-col justify-between flex-1">
         <div>
@@ -193,7 +182,10 @@ foreach ($categories as $key => $label):
                 <?= $cat; ?>
             </span>
 
-            <h3 class="text-xl font-bold text-dark mb-1"><?= $name; ?></h3>
+            <a href="product_details.php?id=<?= $id; ?>">
+                <h3 class="text-xl font-bold text-dark mb-1 hover:text-kumkum transition"><?= $name; ?></h3>
+            </a>
+
             <p class="text-gray-500 text-sm mb-4 line-clamp-2"><?= $desc; ?></p>
 
             <span class="text-2xl font-black text-kumkum">₹<?= number_format($price); ?></span>
@@ -201,7 +193,7 @@ foreach ($categories as $key => $label):
 
         <a href="https://wa.me/7796080794?text=<?= $waTxt; ?>"
            target="_blank"
-           class="whatsapp-btn mt-5 text-white py-3 rounded-xl font-bold text-center">
+           class="whatsapp-btn mt-5 text-white py-3 rounded-xl font-bold text-center shadow-lg hover:shadow-xl transition">
             WhatsApp वर ऑर्डर करा
         </a>
     </div>
