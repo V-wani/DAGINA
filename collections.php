@@ -93,10 +93,14 @@ tailwind.config = {
 <!-- HEADER -->
 <header class="max-w-7xl mx-auto px-6 pt-8 pb-4 flex flex-col md:flex-row justify-between gap-4">
     <div>
-        <h1 class="text-4xl font-extrabold text-kumkum font-heading drop-shadow">
-            दागिने कलेक्शन
-        </h1>
-        <p class="text-gray-500">आजची फॅशन • कालची परंपरा</p>
+        <a href="./index.php" class="block cursor-pointer group">
+            <h1 class="text-4xl font-extrabold text-kumkum font-heading drop-shadow group-hover:underline">
+                दागिने कलेक्शन
+            </h1>
+            <p class="text-gray-500 group-hover:text-kumkum">
+                आजची फॅशन • कालची परंपरा
+            </p>
+        </a>
     </div>
 
     <a href="index.php"
