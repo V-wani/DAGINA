@@ -246,3 +246,24 @@ input:focus {
     aside { transform: translateX(-100%); transition: transform 0.3s ease; }
     aside.open { transform: translateX(0); }
 }
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    color: #6b7280; /* text-gray-500 */
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+    color: #b82040; /* kumkum */
+}
+
+.nav-link.active {
+    background-color: #b82040;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(184, 32, 64, 0.2);
+}

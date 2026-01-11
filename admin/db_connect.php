@@ -5,9 +5,9 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 // Database configuration
 $DB_HOST = "localhost";
 $DB_USER = "root";
-$DB_PASS = "kaliparrot";
+$DB_PASS = "";
 $DB_NAME = "jewellery_db";
-$DB_PORT = 3306;
+$DB_PORT = 3307;
 
 try {
     // Create database connection
