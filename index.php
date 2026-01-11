@@ -347,7 +347,7 @@ $faqs = [
                 <div class="relative animate-float-slow">
                     <div class="glass-card rounded-3xl p-6 max-w-sm border border-kumkum/20 shadow-2xl">
                         <div class="aspect-square rounded-2xl overflow-hidden mb-6 bg-white/50">
-                            <img src="assets/images/showcase/img_01.png" alt="पारंपरिक हलव्याचे दागिने माळ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                            <img src="assets/images/image_banner.jpg" alt="पारंपरिक हलव्याचे दागिने माळ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                         </div>
                         <div class="flex items-center justify-between mb-4">
                             <div>
