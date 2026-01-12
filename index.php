@@ -7,8 +7,8 @@ $products = [
         'id' => 1,
         'title' => 'हलव्याची माळ',
         'desc' => 'पारंपरिक तिळगूळ माळ - हाताने बनवलेली',
-        'price' => 450,
-        'old_price' => 600,
+        'price' => 799,
+        'old_price' => 1200,
         'image' => 'assets/images/showcase/img_01.png',
         'tag' => 'सर्वाधिक लोकप्रिय',
         'tag_color' => 'bg-kumkum text-white',
@@ -16,10 +16,10 @@ $products = [
     ],
     [
         'id' => 2,
-        'title' => 'बांगड्या (जोडी)',
-        'desc' => 'पारंपरिक तिळगूळ बांगड्या',
-        'price' => 350,
-        'old_price' => null, // No old price
+        'title' => 'कृष्ण वेशभूषा सजावटी सेट',
+        'desc' => 'श्रीकृष्ण साज-शृंगार सेट',
+        'price' => 499,
+        'old_price' => 1000, // No old price
         'image' => 'assets/images/showcase/img_04.png',
         'tag' => null,
         'tag_color' => null,
@@ -27,11 +27,11 @@ $products = [
     ],
     [
         'id' => 3,
-        'title' => 'कानातले',
-        'desc' => 'सुंदर तिळगूळ कानातले',
-        'price' => 250,
+        'title' => 'रांगोळी',
+        'desc' => 'मोरपंखी कमळ रांगोळी',
+        'price' => 499,
         'old_price' => null,
-        'image' => 'assets/images/showcase/img_03.png',
+        'image' => 'assets/images/showcase/img_03.jpeg',
         'tag' => null,
         'tag_color' => null,
         'offer' => null
@@ -40,7 +40,7 @@ $products = [
         'id' => 4,
         'title' => 'कमरपट्टा',
         'desc' => 'पारंपरिक तिळगूळ कमरपट्टा',
-        'price' => 400,
+        'price' => 1299,
         'old_price' => null,
         'image' => 'assets/images/showcase/img_02.jpeg',
         'tag' => null,
@@ -51,8 +51,8 @@ $products = [
         'id' => 5,
         'title' => 'पूर्ण सेट',
         'desc' => 'सर्व दागिने एकत्र - माळ, बांगड्या, कानातले, कमरपट्टा',
-        'price' => 1299,
-        'old_price' => 1450,
+        'price' => 599,
+        'old_price' => 1000,
         'image' => 'assets/images/showcase/img_05.png',
         'tag' => '⭐ सर्वोत्तम किंमत',
         'tag_color' => 'bg-turmeric text-deep-black',
@@ -208,7 +208,15 @@ $faqs = [
                         <path d="M8 21h8" />
                     </svg>
                 </div>
-                <span class="text-lg md:text-xl font-bold tracking-tight text-deep-black">हलव्याचे दागिने</span>
+                <div class="flex flex-col leading-tight">
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-deep-black">
+                        हलव्याचे दागिने
+                    </span>
+                    <span class="text-[11px] font-semibold text-kumkum tracking-wide">
+                        पुणे • जळगाव
+                    </span>
+                </div>
+
             </div>
 
             <div class="hidden md:flex items-center gap-8 text-sm font-medium text-deep-black/70">
@@ -274,7 +282,7 @@ $faqs = [
                     </p>
 
                     <p class="text-base md:text-lg text-deep-black/60 leading-relaxed max-w-xl">
-                        पुण्यातील विश्वासार्ह हाताने बनवलेले पारंपरिक तिळगूळ दागिने. १४ जानेवारी २०२६ पूर्वी डिलिव्हरी हमी.
+                        पुणे व जळगाव येथील विश्वासार्ह हाताने बनवलेले पारंपरिक तिळगूळ दागिने. १४ जानेवारी २०२६ पूर्वी डिलिव्हरी हमी.
                     </p>
                 </div>
 
@@ -533,8 +541,8 @@ $faqs = [
                     <div class="w-16 h-16 rounded-full bg-kumkum/20 flex items-center justify-center mx-auto mb-6 text-kumkum">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                     </div>
-                    <h3 class="text-xl font-bold text-deep-black mb-3">पुण्यातील स्थानिक</h3>
-                    <p class="text-deep-black/60 text-sm leading-relaxed">आम्ही पुण्यातील स्थानिक विक्रेते आहोत. तुमच्या जवळच उपलब्ध.</p>
+                    <h3 class="text-xl font-bold text-deep-black mb-3">पुणे • जळगाव येथील स्थानिक</h3>
+                    <p class="text-deep-black/60 text-sm leading-relaxed">आम्ही पुणे व जळगाव येथील स्थानिक विक्रेते आहोत. तुमच्या जवळच उपलब्ध.</p>
                 </div>
                 <div class="glass-card p-8 rounded-3xl border border-turmeric/10 hover:border-turmeric/30 transition-all text-center">
                     <div class="w-16 h-16 rounded-full bg-turmeric/20 flex items-center justify-center mx-auto mb-6 text-turmeric">
